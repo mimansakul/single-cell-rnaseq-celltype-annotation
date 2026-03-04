@@ -1,18 +1,18 @@
-Single-Cell RNA-seq Cell Type Annotation Pipeline
+# Single-Cell RNA-seq Cell Type Annotation Pipeline
 
 This project implements a complete single-cell RNA sequencing (scRNA-seq) analysis pipeline using Python.
 
 The workflow performs:
 
-preprocessing
+- preprocessing
 
-dimensionality reduction
+- dimensionality reduction
 
-clustering
+- clustering
 
-marker gene identification
+- marker gene identification
 
-automated cell type annotation
+- automated cell type annotation
 
 The pipeline is implemented using Scanpy and CellTypist, demonstrating a typical workflow used in modern single-cell transcriptomics analysis.
 
@@ -33,15 +33,15 @@ Nature Genetics, 2017
 
 Dataset Characteristics
 
-~6000 single cells
+- ~6000 single cells
 
-~23,000 genes
+- ~23,000 genes
 
-Tumor epithelial cells
+- Tumor epithelial cells
 
-Immune cells
+- Immune cells
 
-Stromal cells
+- Stromal cells
 
 ## Objective of the Project
 
@@ -133,17 +133,17 @@ The analysis identified multiple cell populations across 5501 single cells.
 
 Major cell populations detected include:
 
-Basal epithelial tumor cells
+- Basal epithelial tumor cells
 
-CD8 effector memory T cells
+- CD8 effector memory T cells
 
-CD4 regulatory T cells
+- CD4 regulatory T cells
 
-Fibroblasts
+- Fibroblasts
 
-Endothelial cells
+- Endothelial cells
 
-Macrophages and dendritic cells
+- Macrophages and dendritic cells
 
 These results highlight the heterogeneous tumor microenvironment of HNSCC, consisting of epithelial tumor cells, immune infiltrates, and stromal cell populations.
 
@@ -213,7 +213,7 @@ Cell type distribution plots
 
 These outputs help interpret the cellular composition of tumor samples.
 
-Biological Significance
+## Biological Significance
 
 Single-cell RNA sequencing enables researchers to study:
 
@@ -265,12 +265,15 @@ Python 3.8
 
 Required libraries:
 
+```bash
 pip install scanpy celltypist pandas numpy matplotlib
+```
 
 ## Author
 
 Mimansa Kulshrestha  
 MSc Bioinformatics
+
 
 
 
