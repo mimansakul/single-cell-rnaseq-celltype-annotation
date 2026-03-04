@@ -47,15 +47,15 @@ Dataset Characteristics
 
 The goal of this project is to construct a reproducible single-cell RNA-seq analysis pipeline that:
 
-Processes scRNA-seq expression data
+- Processes scRNA-seq expression data
 
-Identifies transcriptionally distinct cell populations
+- Identifies transcriptionally distinct cell populations
 
-Detects cluster-specific marker genes
+- Detects cluster-specific marker genes
 
-Annotates cell types using machine learning models
+- Annotates cell types using machine learning models
 
-This workflow replicates the typical bioinformatics pipeline used in cancer single-cell analysis studies.
+- This workflow replicates the typical bioinformatics pipeline used in cancer single-cell analysis studies.
 
 ## Analysis Workflow
 
@@ -147,21 +147,21 @@ Major cell populations detected include:
 
 These results highlight the heterogeneous tumor microenvironment of HNSCC, consisting of epithelial tumor cells, immune infiltrates, and stromal cell populations.
 
-Tools and Libraries Used
+## Tools and Libraries Used
 
 The following tools were used:
 
-Python
+- Python
 
-Scanpy
+- Scanpy
 
-CellTypist
+- CellTypist
 
-Pandas
+- Pandas
 
-NumPy
+- NumPy
 
-Matplotlib
+- Matplotlib
 
 These tools are widely used in single-cell transcriptomics and bioinformatics research.
 
@@ -203,13 +203,13 @@ scRNAseq-project
 
 The pipeline produces:
 
-UMAP visualization of cell clusters
+- UMAP visualization of cell clusters
 
-Marker gene tables for each cluster
+- Marker gene tables for each cluster
 
-Cell type annotation results
+- Cell type annotation results
 
-Cell type distribution plots
+- Cell type distribution plots
 
 These outputs help interpret the cellular composition of tumor samples.
 
@@ -217,25 +217,25 @@ These outputs help interpret the cellular composition of tumor samples.
 
 Single-cell RNA sequencing enables researchers to study:
 
-tumor heterogeneity
+- tumor heterogeneity
 
-immune infiltration
+- immune infiltration
 
-stromal cell populations
+- stromal cell populations
 
-tumor microenvironment interactions
+- tumor microenvironment interactions
 
 In HNSCC tumors, different cell populations such as:
 
-malignant epithelial cells
+- malignant epithelial cells
 
-T cells
+- T cells
 
-macrophages
+- macrophages
 
-fibroblasts
+- fibroblasts
 
-endothelial cells
+- endothelial cells
 
 can be identified and analyzed separately.
 
@@ -273,6 +273,7 @@ pip install scanpy celltypist pandas numpy matplotlib
 
 Mimansa Kulshrestha  
 MSc Bioinformatics
+
 
 
 
