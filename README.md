@@ -239,35 +239,39 @@ endothelial cells
 
 can be identified and analyzed separately.
 
-Pipeline Workflow
-Raw Data
-↓
-Quality Control
-↓
-Normalization
-↓
-Highly Variable Gene Selection
-↓
-Principal Component Analysis (PCA)
-↓
-Clustering
-↓
-UMAP Visualization
-↓
-Marker Gene Identification
-↓
+## Pipeline Workflow
+
+Raw Data  
+↓  
+Quality Control  
+↓  
+Normalization  
+↓  
+Highly Variable Gene Selection  
+↓  
+Principal Component Analysis (PCA)  
+↓  
+Clustering  
+↓  
+UMAP Visualization  
+↓  
+Marker Gene Identification  
+↓  
 Cell Type Annotation (CellTypist)
-Requirements
+
+## Requirements
 
 Python 3.8
 
 Required libraries:
 
 pip install scanpy celltypist pandas numpy matplotlib
-Author
 
-Mimansa Kulshrestha
+## Author
+
+Mimansa Kulshrestha  
 MSc Bioinformatics
+
 
 
 
