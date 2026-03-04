@@ -145,37 +145,40 @@ Matplotlib
 
 These tools are widely used in bioinformatics and single-cell transcriptomics research.
 
-Project Structure
+## Project Structure
+
+```
 scRNAseq-project
 
 ├── scripts
-│   01_load_data.py
-│   02_quality_control.py
-│   03_normalization.py
-│   04_hvg_selection.py
-│   05_scaling.py
-│   06_pca.py
-│   07_neighbors.py
-│   08_clustering.py
-│   09_umap.py
-│   10_marker_genes.py
-│   11_celltypist_annotation.py
-│   12_cell_type_distribution.py
-│
+│   ├── 01_load_data.py
+│   ├── 02_quality_control.py
+│   ├── 03_normalization.py
+│   ├── 04_hvg_selection.py
+│   ├── 05_scaling.py
+│   ├── 06_pca.py
+│   ├── 07_neighbors.py
+│   ├── 08_clustering.py
+│   ├── 09_umap.py
+│   ├── 10_marker_genes.py
+│   ├── 11_celltypist_annotation.py
+│   └── 12_cell_type_distribution.py
+
 ├── figures
-│   umap_clusters.png
-│   celltype_distribution.png
-│   marker_heatmap.png
-│
+│   ├── umap_clusters.png
+│   ├── celltype_distribution.png
+│   └── marker_heatmap.png
+
 ├── results
-│   marker_genes.xlsx
-│   cluster_marker_genes.xlsx
-│   celltype_counts.xlsx
-│
+│   ├── marker_genes.xlsx
+│   ├── cluster_marker_genes.xlsx
+│   └── celltype_counts.xlsx
+
 ├── data
-│   (large files ignored via .gitignore)
-│
+│   └── (large files ignored via .gitignore)
+
 └── README.md
+```
 Outputs Generated
 
 The pipeline produces:
@@ -254,4 +257,5 @@ Author
 
 Mimansa Kulshrestha
 MSc Bioinformatics
+
 
