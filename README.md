@@ -61,11 +61,11 @@ Analysis Workflow
 
 The analysis follows a standard Scanpy scRNA-seq pipeline.
 
-1 Data Loading
+1. Data Loading
 
 The gene expression matrix is loaded and converted into an AnnData object, the core data structure used in Scanpy.
 
-2 Quality Control (QC)
+2. Quality Control (QC)
 
 Quality metrics are calculated to remove low-quality cells.
 
@@ -77,47 +77,51 @@ removing potential doublets
 
 examining mitochondrial gene expression
 
-3 Data Normalization
+3. Data Normalization
 
 Gene expression values are normalized to make cells comparable.
 
 This ensures sequencing depth differences do not bias downstream analysis.
 
-4 Log Transformation
+4. Log Transformation
 
 Log transformation stabilizes variance and improves statistical analysis.
 
-5 Highly Variable Gene (HVG) Selection
+5. Highly Variable Gene (HVG) Selection
 
-Highly variable genes capture the biological differences between cells and are used for dimensionality reduction.
+Highly variable genes capture biological differences between cells and are used for dimensionality reduction.
 
-6 Data Scaling
+6. Data Scaling
 
-The data is scaled so each gene has mean = 0 and variance = 1.
+The data is scaled so each gene has:
+
+mean = 0
+
+variance = 1
 
 This improves PCA performance.
 
-7 Principal Component Analysis (PCA)
+7. Principal Component Analysis (PCA)
 
 PCA reduces the dimensionality of the dataset while preserving major biological variation.
 
-8 Neighborhood Graph Construction
+8. Neighborhood Graph Construction
 
 A K-nearest neighbor graph is constructed based on PCA coordinates to represent cell-to-cell similarity.
 
-9 Clustering
+9. Clustering
 
 Cells are grouped into clusters representing transcriptionally similar populations.
 
-10 UMAP Visualization
+10. UMAP Visualization
 
 UMAP visualizes high-dimensional data in two dimensions, enabling clear visualization of clusters.
 
-11 Marker Gene Identification
+11. Marker Gene Identification
 
-Marker genes are identified for each cluster to characterize their biological identity.
+Marker genes are identified for each cluster to characterize biological identity.
 
-12 Cell Type Annotation
+12. Cell Type Annotation
 
 Cell types are automatically predicted using CellTypist, a machine learning model trained on reference single-cell datasets.
 
@@ -125,7 +129,7 @@ Cluster labels are refined using majority voting.
 
 Tools and Libraries Used
 
-The following tools were used in this project:
+The following tools were used:
 
 Python
 
@@ -229,7 +233,7 @@ UMAP Visualization
    ↓
 Marker Gene Identification
    ↓
-Cell Type Annotation using CellTypist
+Cell Type Annotation (CellTypist)
 Requirements
 
 Python 3.8
@@ -250,3 +254,4 @@ Author
 
 Mimansa Kulshrestha
 MSc Bioinformatics
+
