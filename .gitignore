@@ -1,0 +1,8 @@
+# Ignore entire data folder
+data/
+
+# Ignore scanpy objects
+*.h5ad
+
+# Ignore raw dataset
+HNSCC_all_data.txt
