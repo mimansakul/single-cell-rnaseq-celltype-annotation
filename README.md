@@ -61,71 +61,69 @@ The goal of this project is to construct a reproducible single-cell RNA-seq anal
 
 The analysis follows a standard Scanpy scRNA-seq pipeline.
 
-1.) Data Loading
+### 1. Data Loading
 
-    The gene expression matrix is loaded and converted into an AnnData object, the core data structure used in Scanpy.
+The gene expression matrix is loaded and converted into an AnnData object, the core data structure used in Scanpy.
 
-2.) Quality Control (QC)
+### 2. Quality Control (QC)
 
-    Quality metrics are calculated to remove low-quality cells.
+Quality metrics are calculated to remove low-quality cells.
 
-    QC steps include:
+QC steps include:
 
-    - filtering cells with very low gene counts
+- filtering cells with very low gene counts
+- removing potential doublets
+- examining mitochondrial gene expression
 
-    - removing potential doublets
+### 3. Data Normalization
 
-    - examining mitochondrial gene expression
+Gene expression values are normalized to make cells comparable.
 
-3.) Data Normalization
+This ensures sequencing depth differences do not bias downstream analysis.
 
-    Gene expression values are normalized to make cells comparable.
+### 4. Log Transformation
 
-    This ensures sequencing depth differences do not bias downstream analysis.
+Log transformation stabilizes variance and improves statistical analysis.
 
-4.) Log Transformation
+### 5. Highly Variable Gene (HVG) Selection
 
-    Log transformation stabilizes variance and improves statistical analysis.
+Highly variable genes capture biological differences between cells and are used for dimensionality reduction.
 
-5.) Highly Variable Gene (HVG) Selection
+### 6. Data Scaling
 
-    Highly variable genes capture biological differences between cells and are used for dimensionality reduction.
+The data is scaled so each gene has:
 
-6.) Data Scaling
+- mean = 0
 
-    The data is scaled so each gene has:
+- variance = 1
 
-    mean = 0
+This improves PCA performance.
 
-    variance = 1
+### 7. Principal Component Analysis (PCA)
 
-    This improves PCA performance.
+PCA reduces the dimensionality of the dataset while preserving major biological variation.
 
-7.) Principal Component Analysis (PCA)
+### 8. Neighborhood Graph Construction
 
-    PCA reduces the dimensionality of the dataset while preserving major biological variation.
+A k-nearest neighbor graph is constructed based on PCA coordinates to represent cell-to-cell similarity.
 
-8.) Neighborhood Graph Construction
+### 9. Clustering
 
-    A k-nearest neighbor graph is constructed based on PCA coordinates to represent cell-to-cell similarity.
+Cells are grouped into clusters representing transcriptionally similar populations.
 
-9.) Clustering
+### 10. UMAP Visualization
 
-    Cells are grouped into clusters representing transcriptionally similar populations.
+UMAP visualizes high-dimensional data in two dimensions, enabling clear visualization of clusters.
 
-10.) UMAP Visualization
+### 11. Marker Gene Identification
 
-    UMAP visualizes high-dimensional data in two dimensions, enabling clear visualization of clusters.
+Marker genes are identified for each cluster to characterize biological identity.
 
-11.) Marker Gene Identification
+### 12. Cell Type Annotation
 
-    Marker genes are identified for each cluster to characterize biological identity.
+Cell types are automatically predicted using CellTypist, a machine learning model trained on reference single-cell datasets.
 
-12.) Cell Type Annotation
-
-    Cell types are automatically predicted using CellTypist, a machine learning model trained on reference single-cell datasets.
-
-    Cluster labels are refined using majority voting.
+Cluster labels are refined using majority voting.
 
 ## Results
 
@@ -273,6 +271,7 @@ pip install scanpy celltypist pandas numpy matplotlib
 
 Mimansa Kulshrestha  
 MSc Bioinformatics
+
 
 
 
