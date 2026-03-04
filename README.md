@@ -1,4 +1,4 @@
-Single Cell RNA-seq Cell Type Annotation Pipeline
+Single-Cell RNA-seq Cell Type Annotation Pipeline
 
 This project implements a complete single-cell RNA sequencing (scRNA-seq) analysis pipeline using Python.
 
@@ -21,7 +21,7 @@ Dataset
 Dataset: GSE103322
 Source: Gene Expression Omnibus (GEO)
 
-This dataset contains single-cell RNA sequencing data from Head and Neck Squamous Cell Carcinoma (HNSCC) samples.
+This dataset contains single-cell RNA sequencing data from Head and Neck Squamous Cell Carcinoma (HNSCC) tumor samples.
 
 It includes thousands of individual cells collected from tumor microenvironments and allows researchers to study cellular heterogeneity within cancer tissues.
 
@@ -29,7 +29,7 @@ Dataset Publication
 
 Puram SV et al.
 Single-cell transcriptomic analysis of primary and metastatic tumor ecosystems in head and neck cancer.
-Nature Genetics, 2017.
+Nature Genetics, 2017
 
 Dataset Characteristics
 
@@ -37,7 +37,7 @@ Dataset Characteristics
 
 ~23,000 genes
 
-Tumor cells
+Tumor epithelial cells
 
 Immune cells
 
@@ -45,13 +45,13 @@ Stromal cells
 
 Objective of the Project
 
-The goal of this project is to construct a single-cell analysis pipeline that:
+The goal of this project is to construct a reproducible single-cell RNA-seq analysis pipeline that:
 
 Processes scRNA-seq expression data
 
 Identifies transcriptionally distinct cell populations
 
-Detects marker genes for clusters
+Detects cluster-specific marker genes
 
 Annotates cell types using machine learning models
 
@@ -107,7 +107,7 @@ PCA reduces the dimensionality of the dataset while preserving major biological 
 
 8. Neighborhood Graph Construction
 
-A K-nearest neighbor graph is constructed based on PCA coordinates to represent cell-to-cell similarity.
+A k-nearest neighbor graph is constructed based on PCA coordinates to represent cell-to-cell similarity.
 
 9. Clustering
 
@@ -127,6 +127,26 @@ Cell types are automatically predicted using CellTypist, a machine learning mode
 
 Cluster labels are refined using majority voting.
 
+Results
+
+The analysis identified multiple cell populations across 5501 single cells.
+
+Major cell populations detected include:
+
+Basal epithelial tumor cells
+
+CD8 effector memory T cells
+
+CD4 regulatory T cells
+
+Fibroblasts
+
+Endothelial cells
+
+Macrophages and dendritic cells
+
+These results highlight the heterogeneous tumor microenvironment of HNSCC, consisting of epithelial tumor cells, immune infiltrates, and stromal cell populations.
+
 Tools and Libraries Used
 
 The following tools were used:
@@ -143,7 +163,7 @@ NumPy
 
 Matplotlib
 
-These tools are widely used in bioinformatics and single-cell transcriptomics research.
+These tools are widely used in single-cell transcriptomics and bioinformatics research.
 
 ## Project Structure
 
@@ -221,21 +241,21 @@ can be identified and analyzed separately.
 
 Pipeline Workflow
 Raw Data
-   ↓
+↓
 Quality Control
-   ↓
+↓
 Normalization
-   ↓
+↓
 Highly Variable Gene Selection
-   ↓
+↓
 Principal Component Analysis (PCA)
-   ↓
+↓
 Clustering
-   ↓
+↓
 UMAP Visualization
-   ↓
+↓
 Marker Gene Identification
-   ↓
+↓
 Cell Type Annotation (CellTypist)
 Requirements
 
@@ -243,19 +263,11 @@ Python 3.8
 
 Required libraries:
 
-scanpy
-
-celltypist
-
-pandas
-
-numpy
-
-matplotlib
-
+pip install scanpy celltypist pandas numpy matplotlib
 Author
 
 Mimansa Kulshrestha
 MSc Bioinformatics
+
 
 
