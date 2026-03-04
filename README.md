@@ -16,7 +16,7 @@ automated cell type annotation
 
 The pipeline is implemented using Scanpy and CellTypist, demonstrating a typical workflow used in modern single-cell transcriptomics analysis.
 
-Dataset
+## Dataset
 
 Dataset: GSE103322
 Source: Gene Expression Omnibus (GEO)
@@ -25,7 +25,7 @@ This dataset contains single-cell RNA sequencing data from Head and Neck Squamou
 
 It includes thousands of individual cells collected from tumor microenvironments and allows researchers to study cellular heterogeneity within cancer tissues.
 
-Dataset Publication
+## Dataset Publication
 
 Puram SV et al.
 Single-cell transcriptomic analysis of primary and metastatic tumor ecosystems in head and neck cancer.
@@ -43,7 +43,7 @@ Immune cells
 
 Stromal cells
 
-Objective of the Project
+## Objective of the Project
 
 The goal of this project is to construct a reproducible single-cell RNA-seq analysis pipeline that:
 
@@ -57,7 +57,7 @@ Annotates cell types using machine learning models
 
 This workflow replicates the typical bioinformatics pipeline used in cancer single-cell analysis studies.
 
-Analysis Workflow
+## Analysis Workflow
 
 The analysis follows a standard Scanpy scRNA-seq pipeline.
 
@@ -127,7 +127,7 @@ Cell types are automatically predicted using CellTypist, a machine learning mode
 
 Cluster labels are refined using majority voting.
 
-Results
+## Results
 
 The analysis identified multiple cell populations across 5501 single cells.
 
@@ -199,7 +199,7 @@ scRNAseq-project
 
 └── README.md
 ```
-Outputs Generated
+## Outputs Generated
 
 The pipeline produces:
 
@@ -271,6 +271,7 @@ pip install scanpy celltypist pandas numpy matplotlib
 
 Mimansa Kulshrestha  
 MSc Bioinformatics
+
 
 
 
